@@ -35,6 +35,19 @@ class Bot(commands.Bot):
 	async def event_join(self, user, potato):
 		print('User joined: ' + str(potato.name))
 
+#	@bot.event
+	async def event_message(self, message):
+		try:
+			print('[' + str(datetime.now()) + '][' + str(message.author.name) + '] ' + (message.content))
+		except:
+			pass
+
+		# If you override event_message you will need to handle_commands for commands to work.
+		try:
+			await bot.handle_commands(message)
+		except:
+			pass
+
 	@commands.command(name='test', aliases=['t'])
 	async def test_command(self, ctx):
 		await ctx.send(f'Hello {ctx.author.name}')
