@@ -58,13 +58,15 @@ class Bot(commands.Bot):
 
 	@commands.command(name='discord', aliases=['d'])
 	async def discord_command(self, ctx):
-		await ctx.send(f'{ctx.author.name} Come be a part of the community on discord https://discord.gg/invite/M2YWpfjAvM')
+		await ctx.send(f'{ctx.author.name} Come be a part of the community on discord https://discord.com/servers/willstunforfood-776211399918878760')
 
 	@commands.command(name='socials', aliases=['s'])
 	async def socials_command(self, ctx):
 		await ctx.send(f'YouTube: https://www.youtube.com/justcallmekoko')
 		await ctx.send(f'Instagram: https://www.instagram.com/just.call.me.koko')
 		await ctx.send(f'Twitter: https://twitter.com/jcmkyoutube')
+		await ctx.send(f'TikTok: https://www.tiktok.com/@just.call.me.koko')
+		await ctx.send(f'Patreon: https://www.patreon.com/justcallmekoko')
 
 bot = Bot()
 bot.run()
